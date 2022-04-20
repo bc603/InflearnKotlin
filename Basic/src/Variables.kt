@@ -64,6 +64,26 @@ fun main() {
     var a3:Int = 100
     val a4:Int = 200
 
+    // val 변수는 값을 다시 저장하지 못한다
     a3 = 50
     //a4 = 60 // Val cannot be
+
+    /** null 허용 변수 */
+    // 변수는 선언할때 null 허용 여부를 설정할 수 있다
+    // var/val 변수명:자료형 = 값 -> null을 허용하지 않는 변수
+    // var/val 변수명:자료형? = 값 -> null을 허용하는 변수
+    //var a5:Int = null // null을 허용하지 않는다
+    var a5:Int = 100
+    var a6:Int? = null
+    println("a5 : $a5")
+    println("a6 : $a6")
+
+    //var a7:Int = a6 // Type mismatch
+    var a7:Int = a6!! // !!연산자는 는 null을 허용하는 변수로 변경
+                      // 문법적으로만 허용
+
+    /** 정리 **/
+    // 모든 기본 타입 값을 객체로 만들어서 관리한다
+    // null을 허용하는 변수와 허용하지 않는 변수를 제공한다
+
 }
